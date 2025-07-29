@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dwisend Web Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+    .section {
+      background-color: white;
+      margin-bottom: 30px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    h2 {
+      color: #007bff;
+    }
+    input, select {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+    button {
+      background-color: #25d366;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #888;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Dwisend Web Services</h1>
+  <p>Build your free domain and website today</p>
+</header>
+
+<div class="container">
+  <div class="section">
+    <h2>🌐 What We Offer</h2>
+    <p>Start your online presence with a free domain like <strong>.tk</strong>, <strong>.ml</strong>, or <strong>.cf</strong>. We help you build:</p>
+    <ul>
+      <li>🛒 Online Shops</li>
+      <li>📖 Blogs or News Sites</li>
+      <li>📇 Resume or Portfolios</li>
+      <li>🏢 Company Pages</li>
+    </ul>
+    <p>All websites are hosted free and delivered within 1–2 days.</p>
+  </div>
+
+  <div class="section">
+    <h2>📩 Get Started Now</h2>
+    <form onsubmit="sendToWhatsApp(); return false;">
+      <label for="name">Your Full Name</label>
+      <input type="text" id="name" placeholder="John Doe" required>
+
+      <label for="domain">Preferred Domain Name (.tk, .ml, .cf)</label>
+      <input type="text" id="domain" placeholder="yourbrand.tk" required>
+
+      <label for="type">Select Website Type</label>
+      <select id="type" required>
+        <option value="">-- Select Type --</option>
+        <option value="Online Shop">Online Shop</option>
+        <option value="Blog">Blog</option>
+        <option value="Resume">Resume</option>
+        <option value="Company Page">Company Page</option>
+      </select>
+
+      <label for="phone">Your WhatsApp Number (include country code)</label>
+      <input type="text" id="phone" placeholder="+243822334276" required>
+
+      <button type="submit">Send Request via WhatsApp</button>
+    </form>
+  </div>
+</div>
+
+<footer>
+  &copy; 2025 Dwisend Web Services. All rights reserved.
+</footer>
+
+<script>
+function sendToWhatsApp() {
+  const name = document.getElementById('name').value;
+  const domain = document.getElementById('domain').value;
+  const type = document.getElementById('type').value;
+  const phone = document.getElementById('phone').value;
+
+  const message = `Hello Dwisend,%0A%0AName: ${name}%0ADomain: ${domain}%0AType: ${type}%0AWhatsApp: ${phone}`;
+  const url = `https://wa.me/243822334276?text=${message}`;
+
+  window.open(url, '_blank');
+}
+</script>
+
+</body>
+</html>
